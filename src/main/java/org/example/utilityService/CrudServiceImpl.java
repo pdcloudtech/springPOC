@@ -9,8 +9,10 @@ import java.util.List;
 import java.util.Objects;
 
 @Service
+// @Service means the business logic is specified here
 public class CrudServiceImpl implements CrudService {
     @Autowired
+    //@autowired eliminates the need of getters and setters
     private CustomerRepository repo;
     @Override
     //Save operation

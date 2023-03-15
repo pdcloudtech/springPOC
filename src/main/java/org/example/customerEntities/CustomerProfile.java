@@ -8,14 +8,14 @@ import lombok.NoArgsConstructor;
 import org.springframework.lang.NonNull;
 import java.util.ArrayList;
 
-@Entity
-@Data
+@Entity //class mapped to a table for H2 - in mem database
+@Data // handles tostring(), equals(),getters and setters for POJO's
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class CustomerProfile {
 
-    @Id
+    @Id // specifies the primary key on the entity
     @NonNull
     private String name;
 
