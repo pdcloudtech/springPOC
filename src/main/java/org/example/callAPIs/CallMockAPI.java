@@ -25,7 +25,7 @@ public class CallMockAPI {
         return response;
     }
     @GetMapping("/hello")
-    public String sayHello(@RequestParam(value = "myName", defaultValue = "Spring") String name) throws JSONException {
+    public String sayHello(@RequestParam(value = "myName", defaultValue = "Spring") String name) throws JSONException, JsonProcessingException {
         ParseResponse profile = new ParseResponse();
         profile.processResponse();
         return String.format("Hello %s!!",name);
